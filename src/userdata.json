@@ -1,0 +1,19 @@
+{
+    "userdata": [
+      {
+        "emailid" :"gaurav@yadav",
+        "userid" :"123",
+        "password" :"qwerty"
+      },
+      {
+        "emailid" :"saurav@sharma",
+        "userid" :"0021",
+        "password" :"samsung"
+      },
+      {
+        "emailid" :"yash@khndelwal",
+        "userid" :"2040",
+        "password" :"kosi"
+      }
+    ]
+  }
