@@ -29,6 +29,12 @@ function SignIn(){
                 <Button variant="primary" >
                     Submit
                 </Button>
+                <div style={{padding:20}}>
+                    <>New User??</>
+                    <Link to="/signUp">
+                        <a> SignUp </a>
+                    </Link>
+            </div>
             </Form>
         </div>
     </div>

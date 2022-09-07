@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './Form.css'
 
 function SignUp(){
@@ -10,19 +11,39 @@ function SignUp(){
     const configpasswd=useRef();
     const userid = useRef();
     
+    const addUserdata= (mailid,uid,pass)=>{
+
+        const data={
+            "emailid" :mailid,
+            "userid" :uid,
+            "password" :pass
+        };
+
+        
+
+    }
 
     const check = (e)=>
     {
         e.preventDefault();
-        const passwd=passwd.current.value;
+        const pass=passwd.current.value;
         const confpass=configpasswd.current.value;
         const uid=userid.current.value;
-        if(passwd!= confpass) alert(`Password does not match, check password `);
-        else 
-        {
-            alert(`Sign Up successful`);
-        }
+        const mailid=emailid.current.value;
+        // console.log(`${passwd}`);
+        const data={
+            "emailid" :mailid,
+            "userid" :uid,
+            "password" :pass
+        };
 
+        if(pass!= confpass) alert(`Password does not match, check password `);
+        else 
+        {   
+            addUserdata(mailid,uid,pass);
+            alert(`Sign Up successful , Sign In`);
+            window.location.reload(false);      
+        }
     };
 
     return (
@@ -50,9 +71,14 @@ function SignUp(){
                 <Form.Control type="password" placeholder="Password" ref={configpasswd} />
             </Form.Group>
 
-            <Button variant="primary" onSubmit={check} >
+            <Button variant="primary" onClick={check} >
                 Submit
-            </Button>
+            </Button>     
+            <div style={{padding:20}}>
+                <Link to="/signin">
+                    <p> SignIn </p>
+                </Link>
+            </div>
         </Form>
         <div>
             
