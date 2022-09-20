@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './Form.css'
 
@@ -8,20 +8,20 @@ function SignUp(){
     
     const emailid = useRef();
     const passwd = useRef();
-    const configpasswd=useRef();
+    // const configpasswd=useRef();
     const userid = useRef();
-    
-    const addUserdata= (mailid,uid,pass)=>{
 
-        const data={
-            "emailid" :mailid,
-            "userid" :uid,
-            "password" :pass
-        };
+    const [data,setData]=useState({
+        emailid:"",
+        userid:"",
+        password:""
+    });
 
+    const addUserdata=()=>{
         
 
-    }
+    };
+
 
     // const check = (e)=>
     // {
@@ -67,9 +67,9 @@ function SignUp(){
                 <Form.Control type="password" placeholder="Password" ref={configpasswd} />
             </Form.Group> */}
 
-            <Button variant="primary"  >
-                Submit
-            </Button>     
+            <button variant="primary" onClick={addUserdata} >
+             <Link to="/">Submit</Link>   
+            </button>     
             {/* <div style={{padding:20}}>
                 <Link to="/signin">
                     <p> SignIn </p>
