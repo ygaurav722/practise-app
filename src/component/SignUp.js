@@ -23,24 +23,24 @@ function SignUp(){
 
     }
 
-    const check = (e)=>
-    {
-        e.preventDefault();
-        const pass=passwd.current.value;
-        const confpass=configpasswd.current.value;
-        const uid=userid.current.value;
-        const mailid=emailid.current.value;
-        // console.log(`${passwd}`);
+    // const check = (e)=>
+    // {
+    //     e.preventDefault();
+    //     const pass=passwd.current.value;
+    //     const confpass=configpasswd.current.value;
+    //     const uid=userid.current.value;
+    //     const mailid=emailid.current.value;
+    //     // console.log(`${passwd}`);
         
-        if(pass!== confpass) alert(`Password does not match, check password `);
-        else 
-        {   
-            addUserdata(mailid,uid,pass);
-            alert(`Sign Up successful , Sign In`);
-            addUserdata(mailid,uid,pass);
-            window.location.reload(false);      
-        }
-    };
+    //     if(pass!== confpass) alert(`Password does not match, check password `);
+    //     else 
+    //     {   
+    //         addUserdata(mailid,uid,pass);
+    //         alert(`Sign Up successful , Sign In`);
+    //         addUserdata(mailid,uid,pass);
+    //         window.location.reload(false);      
+    //     }
+    // };
 
     return (
         <div className="forms text" style={{alignItems: 'center'}}>
@@ -61,24 +61,21 @@ function SignUp(){
                 <Form.Label>PASSWORD</Form.Label>
                 <Form.Control type="password" placeholder="Password" ref={passwd}/>
             </Form.Group>
-
+{/* 
             <Form.Group className="mb-3" controlId="formBasicconfigPassword">
                 <Form.Label> CONFIRM PASSWORD</Form.Label>
                 <Form.Control type="password" placeholder="Password" ref={configpasswd} />
-            </Form.Group>
+            </Form.Group> */}
 
-            <Button variant="primary" onClick={check} >
+            <Button variant="primary"  >
                 Submit
             </Button>     
-            <div style={{padding:20}}>
+            {/* <div style={{padding:20}}>
                 <Link to="/signin">
                     <p> SignIn </p>
                 </Link>
-            </div>
+            </div> */}
         </Form>
-        <div>
-            
-        </div>
     </div>
     );
 }
