@@ -11,7 +11,6 @@ const NavBar=()=>(
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/signup">Sign Up</Nav.Link>
             <Nav.Link href="/signin">Sign in</Nav.Link>
-            <Nav.Link href="/users">Users</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

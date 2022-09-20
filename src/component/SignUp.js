@@ -31,17 +31,13 @@ function SignUp(){
         const uid=userid.current.value;
         const mailid=emailid.current.value;
         // console.log(`${passwd}`);
-        const data={
-            "emailid" :mailid,
-            "userid" :uid,
-            "password" :pass
-        };
-
-        if(pass!= confpass) alert(`Password does not match, check password `);
+        
+        if(pass!== confpass) alert(`Password does not match, check password `);
         else 
         {   
             addUserdata(mailid,uid,pass);
             alert(`Sign Up successful , Sign In`);
+            addUserdata(mailid,uid,pass);
             window.location.reload(false);      
         }
     };

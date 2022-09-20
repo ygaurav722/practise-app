@@ -1,12 +1,12 @@
 import React,{Component} from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import './App.css';
-import SignUp from './pages/SignUp';
-import HomePage from './pages/HomePage';
-import Users from './pages/Users';
-import About from './pages/About';
-import NavBar from './NavBar';
-import SignIn from './pages/SignIn';
+import SignUp from './component/SignUp';
+import HomePage from './component/HomePage';
+import Users from './component/Users';
+import About from './component/About';
+import NavBar from './component/NavBar';
+import SignIn from './component/SignIn';
 
 
 class App extends Component {
