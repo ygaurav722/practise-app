@@ -6,7 +6,7 @@ import HomePage from './component/HomePage';
 import Users from './component/Users';
 import About from './component/About';
 import NavBar from './component/NavBar';
-import SignIn from './component/SignIn';
+import Update from './component/Update';
 
 
 class App extends Component {
@@ -17,11 +17,11 @@ class App extends Component {
         <NavBar/>
         <div className='App'>
           <Routes>
-            <Route path='/' element={<HomePage />} exact />
+            <Route path='/' element={<SignUp />} exact />
             <Route path='/about' element={<About />} />
-            <Route path='/signup' element={<SignUp/>} />
-            {/* <Route path='/signin' element={<SignIn/>} /> */}
+            <Route path='/home' element={<HomePage/>} />
             <Route path='/users' element={<Users/>} />
+            <Route path='/update' element={<Update />}/>
           </Routes>
         </div>
       </Router>
